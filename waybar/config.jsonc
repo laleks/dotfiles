@@ -1,0 +1,133 @@
+{
+    "position": "top",
+    "margin-top": 7,
+    "margin-bottom": 0,
+
+    "layer": "top",
+    "height": 35,
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 4,
+
+    // Choose the order of the modules
+    "modules-left": ["wlr/taskbar", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "network", "cpu", "temperature", "hyprland/language", "clock"],
+
+// Modules configuration
+
+  "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+        }
+    },
+
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+   
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            "(.*) - Brave": "🌎 $1",
+            "(.*) - Sublime Text(.*)": "$1 - Sublime",
+            "Kitty": " Kitty"
+        },
+        "separate-outputs": true
+    },
+
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:  %R    %d/%m}"
+    },
+
+
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+
+
+
+
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+
+
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
+
