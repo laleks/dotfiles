@@ -85,8 +85,6 @@
     },
 
 
-
-
     "temperature": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
