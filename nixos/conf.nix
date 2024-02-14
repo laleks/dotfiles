@@ -91,10 +91,7 @@
       ripgrep
       lua-language-server
       swaybg
-      waypaper
       gparted
-      #steamPackages.steam-runtime
-      #polkit_gnome
   ];
 
   fonts.packages = with pkgs; [
