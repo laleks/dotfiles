@@ -1,4 +1,4 @@
-#!/bin/bash
+### #!/bin/bash
 
 read -p 'Next sync with /mnt/multi' var3
 rsync -vrt --progress --delete /mnt/data/distrib /mnt/multi/backup/

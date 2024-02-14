@@ -92,14 +92,18 @@
       lua-language-server
       swaybg
       gparted
+      vscodium
   ];
 
   fonts.packages = with pkgs; [
-  	nerdfonts
-	font-awesome
-	google-fonts
-    corefonts
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; }) # icons
+    font-awesome # icons
+    vistafonts # Consolas
+    google-fonts # Fira Code
 	];
+
+
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -145,7 +149,7 @@ services.samba = {
     media = {
       path = "/mnt/multi/media";
       browseable = "yes";
-      "read only" = "no";
+      "read only" = "yes";
       "guest ok" = "yes";
       "create mask" = "0644";
       "directory mask" = "0755";
