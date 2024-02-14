@@ -146,7 +146,7 @@ services.samba = {
   '';
   shares = {
     media = {
-      path = "/srv/data/media";
+      path = "/mnt/multi/media";
       browseable = "yes";
       "read only" = "no";
       "guest ok" = "yes";
@@ -154,7 +154,7 @@ services.samba = {
       "directory mask" = "0755";
     };
     eva = {
-      path = "/srv/data/eva";
+      path = "/mnt/data/backup/eva";
       browseable = "yes";
       "read only" = "no";
       "guest ok" = "no";
