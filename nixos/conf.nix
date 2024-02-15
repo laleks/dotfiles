@@ -66,14 +66,15 @@
   environment.systemPackages = with pkgs; [
       neovim
       waybar
-      rofi-wayland
       wofi
+      qalculate-gtk
       brave
       pavucontrol
       wl-clipboard
+      cliphist
       telegram-desktop
       foot
-      #grim
+      grim #for screen shot under wayland 
       git
       wtype
       keepassxc
@@ -93,13 +94,15 @@
       swaybg
       gparted
       vscodium
+      python311Full
+      poetry
   ];
 
+
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; }) # icons
+    (nerdfonts.override { fonts = [ "FiraCode" ]; }) # icons
     font-awesome # icons
-    vistafonts # Consolas
-    google-fonts # Fira Code
+    #vistafonts # Consolas
 	];
 
 
