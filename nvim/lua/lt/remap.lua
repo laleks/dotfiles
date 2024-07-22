@@ -19,6 +19,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("n", "<M-r>", [[viw"_dP]])
 vim.keymap.set("n", "*", "*N")
 --vim.keymap.set("v", "*", "<cmd>:let @/=@\"<CR><cmd>set hlsearch<CR>")
 
@@ -28,9 +29,10 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
--- vim.keymap.set("i", "<C-c>", "<Esc>")
-vim.keymap.set("i", "jk", "<Esc>")
-vim.keymap.set("v", "<M-c>", "<Esc>")
+vim.keymap.set("i", "<M-c>", "<Esc>")
+vim.keymap.set("n", "<M-w>", "<C-w>o")
+-- vim.keymap.set("i", "jk", "<Esc>")
+-- vim.keymap.set("v", "<M-c>", "<Esc>")
 
 --vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -43,10 +45,20 @@ end)
 --vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 --vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+
+-- vim.keymap.set("n", "Left", "h")
+-- vim.keymap.set("n", "Down", "j")
+-- vim.keymap.set("n", "Up", "k")
+-- vim.keymap.set("n", "Right", "l")
+-- vim.keymap.set("v", "Left", "h")
+-- vim.keymap.set("v", "Down", "j")
+-- vim.keymap.set("v", "Up", "k")
+-- vim.keymap.set("v", "Right", "l")
+
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("v", "<leader>s", [[:s//<C-r><S-">/g<Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-vim.keymap.set("n", "<leader>8",function()
+vim.keymap.set("n", "<leader>*",function()
     vim.cmd("nohlsearch")
 end)
 --vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
@@ -57,3 +69,7 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 
+vim.keymap.set("n", "<F7>", function()
+    vim.cmd("w")
+    vim.cmd("!python %")
+end)

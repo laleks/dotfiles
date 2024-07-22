@@ -4,7 +4,7 @@
     "margin-bottom": 0,
 
     "layer": "top",
-    "height": 35,
+    "height": 44,
     "margin-left": 0,
     "margin-right": 0,    
     "spacing": 4,
@@ -62,8 +62,9 @@
 
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:  %R    %d/%m}"
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M   %d/%m}"
+        //"format": "{:%T<small> %Z</small>}"
     },
 
     "cpu": {

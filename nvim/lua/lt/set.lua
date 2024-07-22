@@ -19,6 +19,8 @@ vim.opt.undofile = true
 
 --vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
@@ -35,7 +37,11 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldenable = false
 vim.opt.foldcolumn = "1"
 
+vim.opt.cursorline = true        -- Подсветка строки с курсором
+
 vim.g.netrw_sort_sequence = "\\/"
+vim.g.mapleader = " "
+
 
 -- Подсвечивает на доли секунды скопированную часть текста
 vim.api.nvim_exec([[
@@ -45,4 +51,3 @@ autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", ti
 augroup end
 ]], false)
 
-vim.opt.cursorline = true        -- Подсветка строки с курсором

@@ -8,3 +8,5 @@ ln -s -f /mnt/data/lt/dotfiles/hypr/ ~/.config/
 ln -s -f /mnt/data/lt/dotfiles/waybar/ ~/.config/
 ln -s -f /mnt/data/lt/dotfiles/wofi/ ~/.config/
 ln -s -f /mnt/data/lt/dotfiles/nvim/ ~/.config/
+ln -s -f /mnt/data/lt/dotfiles/rofi/ ~/.config/
+ln -s -f /mnt/data/lt/dotfiles/git/ ~/.config/
