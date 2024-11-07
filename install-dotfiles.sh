@@ -11,3 +11,4 @@ ln -s -f /mnt/data/lt/dotfiles/nvim/ ~/.config/
 ln -s -f /mnt/data/lt/dotfiles/rofi/ ~/.config/
 ln -s -f /mnt/data/lt/dotfiles/git/ ~/.config/
 ln -s -f /mnt/data/lt/dotfiles/mc/ ~/.config/
+ln -s -f /mnt/data/lt/dotfiles/yazi/ ~/.config/

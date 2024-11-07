@@ -1,6 +1,3 @@
-import = [
-    "~/.config/alacritty/rose-pine.toml"
-]
 
 
 [font]
@@ -28,3 +25,8 @@ opacity = 0.8
 
 [colors.primary]
 background = '#000000'
+
+[general]
+import = [
+    "~/.config/alacritty/rose-pine.toml"
+]

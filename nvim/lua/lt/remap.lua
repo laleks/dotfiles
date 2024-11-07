@@ -29,10 +29,10 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
-vim.keymap.set("i", "<M-c>", "<Esc>")
+vim.keymap.set("i", "<M-e>", "<Esc>")
+vim.keymap.set("v", "<M-e>", "<Esc>")
 vim.keymap.set("n", "<M-w>", "<C-w>o")
 -- vim.keymap.set("i", "jk", "<Esc>")
--- vim.keymap.set("v", "<M-c>", "<Esc>")
 
 --vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -61,8 +61,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>*",function()
     vim.cmd("nohlsearch")
 end)
---vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
---vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/lt/packer.lua<CR>")
 vim.keymap.set("n", "<F8>", vim.cmd.TagbarToggle)
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")

@@ -20,12 +20,16 @@
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
-        "format": "{}",
-        "format-icons": {
-			"urgent": "",
-			"active": "",
-			"default": ""
-        }
+        "format": "{name}",
+        // "format-icons": {
+        //     "1": "1",
+        //     "2": "2",
+        //     "3": "3",
+        //     "4": "Q",
+			// "urgent": "",
+			// "active": "",
+			// "default": ""
+        // },
     },
 
 
@@ -40,10 +44,9 @@
     "hyprland/window": {
         "format": "{}",
         "rewrite": {
-            "(.*) - Brave": "$1",
-            "(.*) - Brave Search": "$1",
+            "(.*) - Thorium": "$1",
             "(.*) - Sublime Text(.*)": "$1 - Sublime",
-            "Kitty": " Kitty"
+            "Alacritty": " "
         },
         "separate-outputs": true
     },

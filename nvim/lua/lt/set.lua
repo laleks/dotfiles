@@ -30,7 +30,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 --vim.opt.clipboard = unnamedplus
 
 vim.opt.foldmethod = "indent"
@@ -44,10 +44,10 @@ vim.g.mapleader = " "
 
 
 -- Подсвечивает на доли секунды скопированную часть текста
-vim.api.nvim_exec([[
-augroup YankHighlight
-autocmd!
-autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
-augroup end
-]], false)
+-- vim.api.nvim_exec([[
+-- augroup YankHighlight
+-- autocmd!
+-- autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+-- augroup end
+-- ]], false)
 

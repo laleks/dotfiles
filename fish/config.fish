@@ -10,6 +10,15 @@ function open
     exec xdg-open "$(find -type f | fzf)"
 end
 
+#function y
+#    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+#    yazi $argv --cwd-file="$tmp"
+#    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+#        builtin cd -- "$cwd"
+#    end
+#    rm -f -- "$tmp"
+#end
+
 set -g fish_greeting
 zoxide init --cmd cd fish | source
 
@@ -18,7 +27,8 @@ alias mf="ls | fzf -m"
 alias cppr="rsync --progress -auv"
 alias ks="/mnt/data/lt/dotfiles/script/kaspro-start.sh"
 alias kc="/mnt/data/lt/dotfiles/script/kaspro-coding.sh"
-alias sotkaftp="curlftpfs ftp://user:say22say@192.168.0.61:2221 /home/lt/ftp/"
+# alias sotkaftp="curlftpfs ftp://sotka:say22say@192.168.0.189:2121 /home/lt/ftp/"
+alias sotkaftp="curlftpfs 192.168.0.189:2121 /home/lt/ftp/ -o user=sotka:say22say"
 alias usotkaftp="fusermount -u /home/lt/ftp"
 alias ls='ls -lhaLXA --color=auto --group-directories-first'
 alias grep='grep --color=auto'
